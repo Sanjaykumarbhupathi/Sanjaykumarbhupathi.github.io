@@ -24,10 +24,18 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  NEXT_PUBLIC_SITE_URL: 'https://sanjaykumarbhupathi.github.io'
+  NEXT_PUBLIC_API_BASE_URL: 'https://portfolio-backend-kfwn.onrender.com'
+
 jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+
+    env:
+      NEXT_PUBLIC_SITE_URL: 'https://sanjaykumarbhupathi.github.io'
+      NEXT_PUBLIC_API_BASE_URL:  ${{ secrets.API_BASE_URL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
