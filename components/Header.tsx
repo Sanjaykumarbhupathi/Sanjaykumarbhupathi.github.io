@@ -52,6 +52,7 @@ export function Header() {
                     ))}
                 </div>
 
+
                 {/* Right side actions */}
                 <div className="flex items-center gap-3">
                     <DarkThemeToggle />
