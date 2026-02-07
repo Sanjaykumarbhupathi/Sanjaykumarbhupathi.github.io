@@ -103,31 +103,31 @@ export default function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-b from-slate-50 to-white dark:from-gray-900 dark:to-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-slate-50 to-white dark:from-gray-900 dark:to-gray-800">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-center mb-12 sm:mb-14 md:mb-16" data-aos="fade-up">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
             Featured Projects
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-2">
             Showcasing my best work across different technologies and domains. Each project represents clean code, innovative solutions, and real-world impact.
           </p>
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {projects.map((project, index) => (
             <div
               key={project.id}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className="group relative h-full bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="group relative h-full bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 p-0"
             >
               {/* Top gradient accent */}
               <div className={`h-1 bg-gradient-to-r ${project.color}`}></div>
 
-              <div className="p-8 h-full flex flex-col">
+              <div className="p-6 sm:p-7 md:p-8 h-full flex flex-col">
                 {/* Icon and Title */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-5xl">{project.icon}</div>
@@ -146,7 +146,7 @@ export default function Projects() {
                 </div>
 
                 {/* Project Title */}
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">
                   {project.title}
                 </h3>
 
@@ -156,7 +156,7 @@ export default function Projects() {
                 </p>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-2 mb-4 sm:mb-5 md:mb-6">
                   {project.tags.map((tag, i) => (
                     <span
                       key={i}

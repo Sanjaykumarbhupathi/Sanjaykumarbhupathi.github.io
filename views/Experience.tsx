@@ -61,14 +61,14 @@ export function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-12 sm:py-16 md:py-20 bg-white dark:bg-gray-900">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-center mb-12 sm:mb-14 md:mb-16" data-aos="fade-up">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
             Experience & Education
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-2">
             My professional journey building scalable solutions and growing as a developer
           </p>
         </div>
@@ -88,11 +88,10 @@ export function Experience() {
                 <div key={index} className="relative" data-aos={isLeft ? "fade-right" : "fade-left"}>
                   {/* Timeline dot */}
                   <div
-                    className={`hidden md:block absolute left-1/2 top-0 w-12 h-12 -translate-x-1/2 rounded-full border-4 border-white dark:border-gray-900 z-10 ${
-                      isWork
+                    className={`hidden md:block absolute left-1/2 top-0 w-12 h-12 -translate-x-1/2 rounded-full border-4 border-white dark:border-gray-900 z-10 ${isWork
                         ? 'bg-gradient-to-r from-blue-500 to-purple-500'
                         : 'bg-gradient-to-r from-green-500 to-emerald-500'
-                    }`}
+                      }`}
                   >
                     <div className="flex items-center justify-center w-full h-full text-white">
                       {item.icon}
@@ -101,34 +100,31 @@ export function Experience() {
 
                   {/* Content */}
                   <div
-                    className={`md:w-[calc(50%-2rem)] ${
-                      isLeft ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'
-                    }`}
+                    className={`md:w-[calc(50%-2rem)] ${isLeft ? 'md:mr-auto md:pr-12' : 'md:ml-auto md:pl-12'
+                      }`}
                   >
-                    <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-gray-800 dark:to-gray-700 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-200 dark:border-gray-600 md:hidden mb-4">
+                    <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-gray-800 dark:to-gray-700 p-5 sm:p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-200 dark:border-gray-600 md:hidden mb-4">
                       <div className="flex gap-3 mb-3">
                         <div
-                          className={`p-2 rounded-lg ${
-                            isWork
+                          className={`p-2 rounded-lg ${isWork
                               ? 'bg-blue-100 dark:bg-blue-900/30'
                               : 'bg-green-100 dark:bg-green-900/30'
-                          }`}
+                            }`}
                         >
                           {item.icon}
                         </div>
                         <div className="flex-1">
-                          <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                          <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 dark:text-white">
                             {item.title}
                           </h3>
-                          <p className={`text-sm font-semibold ${
-                            isWork ? 'text-blue-600 dark:text-blue-400' : 'text-green-600 dark:text-green-400'
-                          }`}>
+                          <p className={`text-sm font-semibold ${isWork ? 'text-blue-600 dark:text-blue-400' : 'text-green-600 dark:text-green-400'
+                            }`}>
                             {item.org}
                           </p>
                         </div>
                       </div>
                       <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">{item.date}</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{item.desc}</p>
+                      <p className="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-400 mb-3 sm:mb-4">{item.desc}</p>
                       <div className="space-y-2">
                         {item.responsibilities.map((resp, i) => (
                           <div key={i} className="flex gap-2 text-sm">
@@ -141,34 +137,32 @@ export function Experience() {
 
                     {/* Desktop card */}
                     <div className="hidden md:block">
-                      <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-gray-800 dark:to-gray-700 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-200 dark:border-gray-600">
+                      <div className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-gray-800 dark:to-gray-700 p-6 sm:p-7 md:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-200 dark:border-gray-600">
                         <div className="flex items-start justify-between mb-3">
                           <div>
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
                               {item.title}
                             </h3>
-                            <p className={`text-sm font-semibold mt-1 ${
-                              isWork ? 'text-blue-600 dark:text-blue-400' : 'text-green-600 dark:text-green-400'
-                            }`}>
+                            <p className={`text-sm font-semibold mt-1 ${isWork ? 'text-blue-600 dark:text-blue-400' : 'text-green-600 dark:text-green-400'
+                              }`}>
                               {item.org}
                             </p>
                           </div>
-                          <span className={`text-xs font-bold px-3 py-1 rounded-full ${
-                            isWork
+                          <span className={`text-xs font-bold px-3 py-1 rounded-full ${isWork
                               ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400'
                               : 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
-                          }`}>
+                            }`}>
                             {item.type === 'work' ? 'Experience' : 'Education'}
                           </span>
                         </div>
-                        
+
                         <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-3">
                           <span className="font-semibold">{item.date}</span>
                           <span>•</span>
                           <span>{item.location}</span>
                         </div>
 
-                        <p className="text-gray-700 dark:text-gray-300 mb-4">
+                        <p className="text-xs sm:text-sm md:text-base text-gray-700 dark:text-gray-300 mb-4 sm:mb-5">
                           {item.desc}
                         </p>
 

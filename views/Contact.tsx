@@ -64,19 +64,19 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-white to-slate-50 dark:from-gray-900 dark:to-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white to-slate-50 dark:from-gray-900 dark:to-gray-800">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-center mb-12 sm:mb-14 md:mb-16" data-aos="fade-up">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
             Let's Get In Touch
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-2">
             Have a project in mind or want to collaborate? I'm always open to discussing new ideas and opportunities. Feel free to reach out!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-10 md:mb-12">
           {/* Contact Info Cards */}
           {contactInfo.map((info, index) => (
             <a
@@ -105,7 +105,7 @@ export function Contact() {
 
         {/* Contact Form */}
         <div
-          className="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-8 md:p-12 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700"
+          className="max-w-3xl mx-auto bg-white dark:bg-gray-800 p-6 sm:p-8 md:p-10 lg:p-12 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700"
           data-aos="fade-up"
         >
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
@@ -119,11 +119,10 @@ export function Contact() {
                 <input
                   type="text"
                   {...register('name', { required: 'Name is required' })}
-                  className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${
-                    errors.name
+                  className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${errors.name
                       ? 'border-red-500 focus:border-red-600'
                       : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-400'
-                  } dark:bg-gray-900 dark:text-white bg-white outline-none`}
+                    } dark:bg-gray-900 dark:text-white bg-white outline-none`}
                   placeholder="John Doe"
                 />
                 {typeof errors.name?.message === 'string' && (
@@ -145,11 +144,10 @@ export function Contact() {
                       message: 'Invalid email address',
                     },
                   })}
-                  className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${
-                    errors.email
+                  className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${errors.email
                       ? 'border-red-500 focus:border-red-600'
                       : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-400'
-                  } dark:bg-gray-900 dark:text-white bg-white outline-none`}
+                    } dark:bg-gray-900 dark:text-white bg-white outline-none`}
                   placeholder="john@example.com"
                 />
                 {typeof errors.email?.message === 'string' && (
@@ -166,11 +164,10 @@ export function Contact() {
               <input
                 type="text"
                 {...register('subject', { required: 'Subject is required' })}
-                className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${
-                  errors.subject
+                className={`w-full px-4 py-3 rounded-lg border-2 transition-colors ${errors.subject
                     ? 'border-red-500 focus:border-red-600'
                     : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-400'
-                } dark:bg-gray-900 dark:text-white bg-white outline-none`}
+                  } dark:bg-gray-900 dark:text-white bg-white outline-none`}
                 placeholder="Project Collaboration"
               />
               {typeof errors.subject?.message === 'string' && (
@@ -189,11 +186,10 @@ export function Contact() {
                   minLength: { value: 10, message: 'Message must be at least 10 characters' },
                 })}
                 rows={6}
-                className={`w-full px-4 py-3 rounded-lg border-2 transition-colors resize-none ${
-                  errors.message
+                className={`w-full px-4 py-3 rounded-lg border-2 transition-colors resize-none ${errors.message
                     ? 'border-red-500 focus:border-red-600'
                     : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-400'
-                } dark:bg-gray-900 dark:text-white bg-white outline-none`}
+                  } dark:bg-gray-900 dark:text-white bg-white outline-none`}
                 placeholder="Tell me about your project or opportunity..."
               ></textarea>
               {typeof errors.message?.message === 'string' && (

@@ -102,19 +102,19 @@ export function Certifications() {
               Certifications & Credentials
             </h2>
           </div>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto px-2">
             Professional certifications and credentials demonstrating expertise across modern technologies and best practices
           </p>
         </div>
 
         {/* Certifications Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-10 md:mb-12">
           {certifications.map((cert, index) => (
             <div
               key={cert.id}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className="group relative h-full bg-gradient-to-br from-slate-50 to-slate-100 dark:from-gray-800 dark:to-gray-700 p-6 rounded-2xl border border-gray-200 dark:border-gray-600 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group relative h-full bg-gradient-to-br from-slate-50 to-slate-100 dark:from-gray-800 dark:to-gray-700 p-5 sm:p-6 md:p-7 rounded-2xl border border-gray-200 dark:border-gray-600 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               {/* Top gradient bar */}
               <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${cert.color} rounded-t-2xl`}></div>
